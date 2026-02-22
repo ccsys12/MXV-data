@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winery Inventory Management System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            padding: 60px 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 600px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #764ba2;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .icon {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            padding: 18px 40px;
+            border-radius: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin: 10px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 15px rgba(118, 75, 162, 0.4);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(118, 75, 162, 0.6);
+        }
+
+        .btn-secondary {
+            background: #28a745;
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
+        }
+
+        .btn-secondary:hover {
+            box-shadow: 0 6px 20px rgba(40, 167, 69, 0.6);
+        }
+
+        .info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        .info h3 {
+            color: #764ba2;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .info ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .info li {
+            padding: 8px 0;
+            color: #555;
+        }
+
+        .info li:before {
+            content: "✅ ";
+            margin-right: 10px;
+        }
+
+        .divider {
+            height: 1px;
+            background: #ddd;
+            margin: 30px 0;
+        }
+
+        .version-badge {
+            display: inline-block;
+            background: #dc3545;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            margin-left: 10px;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            .btn {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">🍷</div>
+        <h1>Winery Inventory System</h1>
+        <p class="subtitle">Cloud-Based Multi-User Inventory Management</p>
+
+        <a href="winery-system-firebase-english.html" class="btn">
+            🔥 Launch System (Firebase Cloud)
+        </a>
+
+        <div class="divider"></div>
+
+        <div class="info">
+            <h3>🌟 System Features</h3>
+            <ul>
+                <li>Real-time data synchronization across all devices</li>
+                <li>Multi-warehouse inventory management</li>
+                <li>Inbound & Outbound transaction tracking</li>
+                <li>Access control (Admin & Warehouse roles)</li>
+                <li>Complete audit trail & access logs</li>
+                <li>Excel export functionality</li>
+                <li>Mobile-friendly responsive design</li>
+            </ul>
+        </div>
+
+        <div class="info" style="margin-top: 20px;">
+            <h3>🔐 Login Information</h3>
+            <p style="text-align: center; color: #666;">
+                <strong>Default Admin Account:</strong><br>
+                Username: <code style="background: #e9ecef; padding: 2px 8px; border-radius: 4px;">admin</code><br>
+                Password: <code style="background: #e9ecef; padding: 2px 8px; border-radius: 4px;">admin123</code>
+            </p>
+            <p style="text-align: center; color: #dc3545; margin-top: 15px; font-size: 0.9em;">
+                ⚠️ Please change the default password after first login!
+            </p>
+        </div>
+
+        <div style="margin-top: 30px; color: #999; font-size: 0.9em;">
+            <p>Powered by Firebase & GitHub Pages</p>
+            <p style="margin-top: 5px;">© 2026 Winery Management System</p>
+        </div>
+    </div>
+
+    <script>
+        // Auto-redirect after 3 seconds (optional - remove if not desired)
+        // setTimeout(() => {
+        //     window.location.href = 'winery-system-firebase-english.html';
+        // }, 3000);
+    </script>
+</body>
+</html>
