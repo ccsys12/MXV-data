@@ -2443,9 +2443,24 @@
                 purpose: purpose,
                 operator: currentUser ? currentUser.name : 'admin',
                 notes: notes
+});
+            // Save record to Firestore
+            await db.collection('records').add({
+                timestamp: getPDTISOString(selectedDate),
+                type: 'Outbound',
+                productCode: product.code,
+                productName: product.name,
+                warehouseCode: warehouseCode,
+                warehouseName: warehouse.name,
+                quantity: quantity,
+                price: product.price,
+                salePrice: salePrice,
+                total: totalAmount,
+                target: target,
+                purpose: purpose,
+                operator: currentUser ? currentUser.name : 'admin',
+                notes: notes
             });
-
-            // saveData(); // Removed - Firebase auto-saves
             if (outboundType === 'Sale') {
                 showAlert('outboundSuccess', `Sale from ${warehouse.name}: ${product.name} ${quantity} bottles, total $${totalAmount.toFixed(2)}`);
             } else {
