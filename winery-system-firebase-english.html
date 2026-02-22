@@ -1645,11 +1645,14 @@
                 document.body.appendChild(confirmDiv);
                 
                 // 确定按钮
-                document.getElementById('confirmDeleteProduct').onclick = function() {
+                document.getElementById('confirmDeleteProduct').onclick =async function() {
                     console.log('✅ User confirmed product deletion');
                     document.body.removeChild(confirmDiv);
-                    products.splice(index, 1);
+                   // products.splice(index, 1);
                     // saveData(); // Removed - Firebase auto-saves
+                      products.splice(index, 1);
+                      // Delete from Firestore
+                    await db.collection('products').doc(product.code).delete();
                     alert('✅ 产品 "' + product.name + '" deleted successfully!');
                     updateProductsTable();
                     populateProductSelects();
