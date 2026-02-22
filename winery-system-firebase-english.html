@@ -2405,6 +2405,7 @@
             }
 
             setProductStock(productCode, warehouseCode, currentStock - quantity);
+            await saveInventory(warehouseCode, productCode, currentStock - quantity);
 
             let salePrice = null, totalAmount = 0, target = '', purpose = '';
 
@@ -2419,6 +2420,7 @@
                 if (!targetWarehouse) return;
                 const targetStock = getProductStock(productCode, targetWarehouseCode);
                 setProductStock(productCode, targetWarehouseCode, targetStock + quantity);
+                await saveInventory(targetWarehouseCode, productCode, targetStock + quantity);
                 target = targetWarehouse.name;
                 purpose = 'Warehouse Transfer';
                 totalAmount = quantity * product.price;
